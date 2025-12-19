@@ -7,38 +7,44 @@
 </head>
 <body>
 
+  <!-- SOM DE IMPACTO -->
   <audio id="startSound" preload="auto">
-    <source src="fog.mp3" type="audio/mpeg">
+    <source src="../fog.mp3" type="audio/mpeg">
   </audio>
 
-  <div class="ruido"></div>
+  <!-- ÁUDIO PERSISTENTE -->
+  <iframe
+    id="audio-frame"
+    src="../audio.html"
+    style="display:none">
+  </iframe>
 
   <div class="container">
-    <h1>"Entre o véu da névoa, ocultam-se dores que não cessam… ecos de eternidade falhada."</h1>
+    <h1>
+      "Entre o véu da névoa, ocultam-se dores que não cessam…
+      ecos de eternidade falhada."
+    </h1>
+
     <div class="background-simbolo">
-      <img src="imgs/medo.png" alt="" width="400px">
+      <img src="../imgs/medo.png" width="400">
     </div>
 
-    <button class="comecar" onclick="começar()"">EU SEI A VERDADE</button>
-
-    <p id="mensagem"></p>
+    <button class="comecar" onclick="comecar()">EU SEI A VERDADE</button>
   </div>
-</body>
-</html>
 
-<script>
-    function começar(){
+  <script>
+    function comecar() {
       const som = document.getElementById("startSound");
-      const iframe = document.getElementById("audio-frame");
       som.volume = 0.6;
       som.play();
-      
-     document.body.classList.add("fade-out");
+
+      document.body.classList.add("fade-out");
 
       setTimeout(() => {
-        window.location.href = "puzzles/1.html";
+        window.location.href = "../puzzles/1.html";
       }, 2000);
-     iframe.src = "audio.html";
-
     }
-</script>
+  </script>
+
+</body>
+</html>
