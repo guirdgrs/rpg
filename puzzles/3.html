@@ -6,7 +6,6 @@
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-
   <div class="ruido"></div>
 
   <div class="container">
@@ -27,7 +26,10 @@
   const mensagem = document.getElementById("mensagem");
 
   if (senha === "not afraid") {
-    window.location.href = "../revelados/not_afraid.html";
+     document.body.classList.add("fade-out");
+      setTimeout(() => {
+        window.location.href = "../revelados/not_afraid.html";
+      }, 600);
   } 
   else {
     mensagem.textContent = "Esta não é a resposta...";

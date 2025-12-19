@@ -27,7 +27,11 @@
   const mensagem = document.getElementById("mensagem");
 
   if (senha === "segredos") {
-    window.location.href = "../revelados/segredos.html";
+    document.body.classList.add("fade-out");
+
+      setTimeout(() => {
+        window.location.href = "../revelados/segredos.html";
+      }, 600);
   } 
   else {
     mensagem.textContent = "Esta não é a resposta...";

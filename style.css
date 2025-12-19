@@ -1,3 +1,11 @@
+:root {
+  --hunter-green: #36593D;
+  --charcoal-brown: #3D3F35;
+  --granite: #4E604E;
+  --carbon-black: #181714;
+  --charcoal-brown-2: #30372A;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
 * {
@@ -7,14 +15,36 @@
 }
 
 body {
-  background: radial-gradient(circle, #0b0000, #000);
-  color: #b30000;
+  background: radial-gradient(
+    circle,
+    var(--charcoal-brown),
+    var(--carbon-black)
+  );
+  color: var(--hunter-green);
   font-family: 'Special Elite', monospace;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow: hidden;]
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-out {
+  animation: fadeOut 0.6s ease forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
 }
 
 /* Ruído na tela */
@@ -32,32 +62,32 @@ body {
 }
 
 .container h1{
-  font-size: 2rem;
+  font-size: 50px;
   letter-spacing: 5px;
-  text-shadow: 0 0 10px #400;
+  text-shadow: 0 0 10px var(--carbon-black);
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 40px;
   letter-spacing: 5px;
-  text-shadow: 0 0 10px #400;
+  text-shadow: 0 0 10px var(--granite);
+  color: var(--hunter-green);
 }
 
 .subtexto {
-  margin-top: 30px;
-  margin-bottom: 10px;
-  color: #700;
+  margin: 15px 0 25px;
+  color: var(--granite);
   font-size: 40px;
 }
 
 .subtexto b{
-  color: #b30000;
+  color: var(--hunter-green);
 }
 
 input {
-  background: black;
-  border: 1px solid #400;
-  color: #b30000;
+  background: var(--carbon-black);
+  border: 1px solid var(--granite);
+  color: var(--hunter-green);
   padding: 12px;
   font-size: 1rem;
   width: 250px;
@@ -65,13 +95,13 @@ input {
 }
 
 input::placeholder {
-  color: #500;
+  color: var(--charcoal-brown);
 }
 
 button {
   background: transparent;
-  border: 1px solid #600;
-  color: #b30000;
+  border: 1px solid var(--hunter-green);
+  color: var(--hunter-green);
   padding: 12px 30px;
   margin-left: 10px;
   cursor: pointer;
@@ -79,12 +109,12 @@ button {
 }
 
 button:hover {
-  background: #400;
+  background: var(--charcoal-brown-2);
 }
 
 #mensagem {
   margin-top: 20px;
-  color: #ff0000;
+  color: var(--granite);
   font-size: 0.9rem;
 }
 
@@ -92,4 +122,27 @@ button:hover {
   0% { opacity: 0.9; }
   50% { opacity: 1; }
   100% { opacity: 0.9; }
+}
+
+.background-simbolo {
+  position: fixed;
+  inset: 0;
+  background-image: url("imgs/medo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.08;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.comecar{
+  background-color: #181714;
+  border: 1px solid var(--hunter-green);
+  color: var(--hunter-green);
+  padding: 12px 30px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 40px;
 }

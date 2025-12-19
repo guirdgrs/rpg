@@ -27,7 +27,10 @@
   const mensagem = document.getElementById("mensagem");
 
   if (senha === "névoa") {
-    window.location.href = "../revelados/nevoa.html";
+     document.body.classList.add("fade-out");
+      setTimeout(() => {
+        window.location.href = "../revelados/nevoa.html";
+      }, 600);
   } 
   else {
     mensagem.textContent = "Esta não é a resposta...";

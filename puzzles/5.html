@@ -27,7 +27,10 @@
   const mensagem = document.getElementById("mensagem");
 
   if (senha === "falsos profetas") {
-    window.location.href = "../revelados/falsos_profetas.html";
+     document.body.classList.add("fade-out");
+      setTimeout(() => {
+        window.location.href = "../revelados/falsos_profetas.html";
+      }, 600);
   } 
   else {
     mensagem.textContent = "Esta não é a resposta...";

@@ -6,7 +6,6 @@
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-
   <div class="ruido"></div>
 
   <div class="container">
@@ -28,7 +27,7 @@
 
   nomes = [ 
     "leonardo",
-    "lzio",
+    "ezio",
     "draken",
     "tonny",
     "fernando",
@@ -41,15 +40,30 @@
   ];
 
   if (senha === nomes[0] || senha === nomes[5]) {
-    window.location.href = "../personagens/leonardo.html";
+     document.body.classList.add("fade-out");
+      setTimeout(() => {
+        window.location.href = "../personagens/leonardo.html";
+      }, 600);
   } else if (senha === nomes[1] || senha === nomes[6]) {
-    window.location.href = "../personagens/ezio.html";
+     document.body.classList.add("fade-out");
+      setTimeout(() => {
+        window.location.href = "../personagens/ezio.html";
+      }, 600);
   } else if (senha === nomes[2] || senha === nomes[7]) {
-    window.location.href = "../personagens/draken.html";
+     document.body.classList.add("fade-out");
+      setTimeout(() => {
+        window.location.href = "../personagens/draken.html";
+      }, 600);
   } else if (senha === nomes[3] || senha === nomes[8]) {
-    window.location.href = "../personagens/tonny.html";
+     document.body.classList.add("fade-out");
+      setTimeout(() => {
+        window.location.href = "../personagens/tonny.html";
+      }, 600);
   } else if (senha === nomes[4] || senha === nomes[9]) {
-    window.location.href = "../personagens/fernando.html";
+     document.body.classList.add("fade-out");
+      setTimeout(() => {
+        window.location.href = "../personagens/fernando.html";
+      }, 600);
   }
   else {
     mensagem.textContent = "Esta não é a resposta...";

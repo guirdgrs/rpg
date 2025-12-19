@@ -6,7 +6,6 @@
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-
   <div class="ruido"></div>
 
   <div class="container">
@@ -27,9 +26,11 @@
   const mensagem = document.getElementById("mensagem");
 
   if (senha === "desespero") {
-    window.location.href = "../revelados/desespero.html";
-  } 
-  else {
+     document.body.classList.add("fade-out");
+      setTimeout(() => {
+        window.location.href = "../revelados/desespero.html";
+      }, 600);
+  } else {
     mensagem.textContent = "Esta não é a resposta...";
     mensagem.style.animation = "tremer 0.3s infinite";
   }

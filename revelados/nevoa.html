@@ -37,6 +37,9 @@
 
 <script>
   function continuar(){
-    window.location.href = "../puzzles/3.html";
+     document.body.classList.add("fade-out");
+      setTimeout(() => {
+        window.location.href = "../puzzles/3.html";
+      }, 600);
   }
 </script>
