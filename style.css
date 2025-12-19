@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle, #0b0000, #000);
+  color: #b30000;
+  font-family: 'Special Elite', monospace;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Ruído na tela */
+.ruido {
+  position: fixed;
+  inset: 0;
+  background: url("https://i.imgur.com/8pQeH5Z.png");
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.container {
+  text-align: center;
+  animation: pulsar 4s infinite;
+}
+
+.container h1{
+  font-size: 2rem;
+  letter-spacing: 5px;
+  text-shadow: 0 0 10px #400;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: 5px;
+  text-shadow: 0 0 10px #400;
+}
+
+.subtexto {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #700;
+  font-size: 40px;
+}
+
+.subtexto b{
+  color: #b30000;
+}
+
+input {
+  background: black;
+  border: 1px solid #400;
+  color: #b30000;
+  padding: 12px;
+  font-size: 1rem;
+  width: 250px;
+  text-align: center;
+}
+
+input::placeholder {
+  color: #500;
+}
+
+button {
+  background: transparent;
+  border: 1px solid #600;
+  color: #b30000;
+  padding: 12px 30px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #400;
+}
+
+#mensagem {
+  margin-top: 20px;
+  color: #ff0000;
+  font-size: 0.9rem;
+}
+
+@keyframes pulsar {
+  0% { opacity: 0.9; }
+  50% { opacity: 1; }
+  100% { opacity: 0.9; }
+}

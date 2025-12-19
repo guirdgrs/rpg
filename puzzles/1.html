@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>1</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <div class="ruido"></div>
+
+  <div class="container">
+    <h1>"1"</h1>
+    <p class="subtexto">Jwf uwf xjw zrf anfljr ufwf ijxhtsywfnw, rfx f gwnxf ywtzcj <b>xjlwjitx</b> vzj snslzér vzjwnf tzanw.</p>
+
+    <input type="text" id="senha" placeholder="">
+    <button onclick="verificarSenha()">REVELAR</button>
+
+    <p id="mensagem"></p>
+  </div>
+</body>
+</html>
+
+<script>
+  function verificarSenha() {
+  const senha = document.getElementById("senha").value.toLowerCase().trim();
+  const mensagem = document.getElementById("mensagem");
+
+  if (senha === "segredos") {
+    window.location.href = "../revelados/segredos.html";
+  } 
+  else {
+    mensagem.textContent = "Esta não é a resposta...";
+    mensagem.style.animation = "tremer 0.3s infinite";
+  }
+}
+</script>

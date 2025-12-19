@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>5</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <div class="ruido"></div>
+
+  <div class="container">
+    <h1>"5"</h1>
+    <p class="subtexto">Mateus 7:15</p>
+
+    <input type="text" id="senha" placeholder="4 5">
+    <button onclick="verificarSenha()">REVELAR</button>
+
+    <p id="mensagem"></p>
+  </div>
+</body>
+</html>
+
+<script>
+  function verificarSenha() {
+  const senha = document.getElementById("senha").value.toLowerCase().trim();
+  const mensagem = document.getElementById("mensagem");
+
+  if (senha === "falsos profetas") {
+    window.location.href = "../revelados/falsos_profetas.html";
+  } 
+  else {
+    mensagem.textContent = "Esta não é a resposta...";
+    mensagem.style.animation = "tremer 0.3s infinite";
+  }
+}
+</script>

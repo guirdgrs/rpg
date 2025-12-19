@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>2</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <div class="ruido"></div>
+
+  <div class="container">
+    <h1>"2"</h1>
+    <p class="subtexto">1 <b>5</b> 2 7 4 2 3, 10 2 5 3 8 9 2 6...</p>
+
+    <input type="text" id="senha" placeholder="">
+    <button onclick="verificarSenha()">REVELAR</button>
+
+    <p id="mensagem"></p>
+  </div>
+</body>
+</html>
+
+<script>
+  function verificarSenha() {
+  const senha = document.getElementById("senha").value.toLowerCase().trim();
+  const mensagem = document.getElementById("mensagem");
+
+  if (senha === "névoa") {
+    window.location.href = "../revelados/nevoa.html";
+  } 
+  else {
+    mensagem.textContent = "Esta não é a resposta...";
+    mensagem.style.animation = "tremer 0.3s infinite";
+  }
+}
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>3</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <div class="ruido"></div>
+
+  <div class="container">
+    <h1>"3"</h1>
+    <p class="subtexto">15 <b>16</b> 17 18</p>
+
+    <input type="text" id="senha" placeholder="3 4">
+    <button onclick="verificarSenha()">REVELAR</button>
+
+    <p id="mensagem"></p>
+  </div>
+</body>
+</html>
+
+<script>
+  function verificarSenha() {
+  const senha = document.getElementById("senha").value.toLowerCase().trim();
+  const mensagem = document.getElementById("mensagem");
+
+  if (senha === "not afraid") {
+    window.location.href = "../revelados/not_afraid.html";
+  } 
+  else {
+    mensagem.textContent = "Esta não é a resposta...";
+    mensagem.style.animation = "tremer 0.3s infinite";
+  }
+}
+</script>

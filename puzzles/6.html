@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>6</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <div class="ruido"></div>
+
+  <div class="container">
+    <h1>"6"</h1>
+    <p class="subtexto">Qual o nome que lhe foi dado?</p>
+
+    <input type="text" id="senha" placeholder="">
+    <button onclick="verificarSenha()">REVELAR</button>
+
+    <p id="mensagem"></p>
+  </div>
+</body>
+</html>
+
+<script>
+  function verificarSenha() {
+  const senha = document.getElementById("senha").value.toLowerCase().trim();
+  const mensagem = document.getElementById("mensagem");
+
+  nomes = [ 
+    "leonardo",
+    "lzio",
+    "draken",
+    "tonny",
+    "fernando",
+
+    "leonardo portella",
+    "ezio valente",
+    "draken de sousa",
+    "tonny erdrick",
+    "fernando hernandez",
+  ];
+
+  if (senha === nomes[0] || senha === nomes[5]) {
+    window.location.href = "../personagens/leonardo.html";
+  } else if (senha === nomes[1] || senha === nomes[6]) {
+    window.location.href = "../personagens/ezio.html";
+  } else if (senha === nomes[2] || senha === nomes[7]) {
+    window.location.href = "../personagens/draken.html";
+  } else if (senha === nomes[3] || senha === nomes[8]) {
+    window.location.href = "../personagens/tonny.html";
+  } else if (senha === nomes[4] || senha === nomes[9]) {
+    window.location.href = "../personagens/fernando.html";
+  }
+  else {
+    mensagem.textContent = "Esta não é a resposta...";
+    mensagem.style.animation = "tremer 0.3s infinite";
+  }
+}
+</script>
