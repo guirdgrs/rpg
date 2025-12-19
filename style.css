@@ -47,14 +47,14 @@ body {
   }
 }
 
-/* Ruído na tela */
+/* Ruído na tela
 .ruido {
   position: fixed;
   inset: 0;
   background: url("https://i.imgur.com/8pQeH5Z.png");
   opacity: 0.05;
   pointer-events: none;
-}
+} */
 
 .container {
   text-align: center;
